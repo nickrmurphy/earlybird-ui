@@ -19,11 +19,11 @@ export default function DateButton({
             className={classNames(
                 'py-1.5 hover:bg-gray-100 focus:z-10',
                 isCurrentMonth ? 'bg-white' : 'bg-gray-50',
-                (isSelected && !isToday) && 'font-semibold',
+                (isSelected && !isToday) && 'font-medium',
                 isSelected && 'text-white',
                 !isSelected && isCurrentMonth && !isToday && 'text-gray-900',
                 !isSelected && !isCurrentMonth && !isToday && 'text-gray-400',
-                isToday && 'font-extrabold',
+                isToday && 'font-semibold',
                 index === 0 && 'rounded-tl-sm',
                 index === 6 && 'rounded-tr-sm',
                 index === totalDays - 7 && 'rounded-bl-sm',
@@ -33,8 +33,8 @@ export default function DateButton({
             <time
                 dateTime={date}
                 className={classNames(
-                    'mx-auto flex h-7 w-7 items-center justify-center rounded-full',
-                    isSelected && isToday && 'bg-gray-200 shadow-lg text-gray-900 border-gray-900 border-2',
+                    'mx-auto flex h-7 w-7 items-center justify-center rounded-lg',
+                    isSelected && isToday && 'bg-gray-50 shadow-sm text-gray-900 border-gray-900 border-2',
                     isSelected && !isToday && 'bg-gray-900'
                 )}
             >

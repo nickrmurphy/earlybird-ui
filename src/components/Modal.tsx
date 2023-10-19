@@ -44,7 +44,7 @@ export default function Modal({
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 py-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
                 <div>
                   <div className="text-center">
-                    <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
+                    <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900 font-serif">
                       {title}
                     </Dialog.Title>
                     <div className="mt-2">

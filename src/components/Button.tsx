@@ -7,7 +7,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const styles = {
-    base: 'rounded-full px-3 py-2 text-xs shadow-sm font-semibold',
+    base: 'rounded-full px-3 py-2 text-xs shadow-sm font-medium',
     focus: 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600',
     expand: 'w-full',
     variants: {

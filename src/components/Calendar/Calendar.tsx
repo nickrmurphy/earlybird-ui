@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useReducer, useState } from 'react'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
+import { ArrowLeft, ArrowRight } from '@icon-park/react';
 import { getWeeksInMonth, format, startOfMonth, startOfWeek, addDays, subMonths, addMonths, isSameMonth, isToday } from 'date-fns';
 import DateButton from './DateButton';
 import { daysOfWeek } from './constants';
@@ -45,9 +45,9 @@ export default function Calendar({ onDatesChange }) {
             className="-m-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500"
           >
             <span className="sr-only">Previous month</span>
-            <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+            <ArrowLeft className="h-5 w-5" aria-hidden="true" />
           </button>
-          <div className="flex-auto text-sm font-semibold">
+          <div className="flex-auto text-sm font-semibold font-serif">
             {format(month, "MMMM")}
           </div>
           <button
@@ -56,7 +56,7 @@ export default function Calendar({ onDatesChange }) {
             className="-m-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500"
           >
             <span className="sr-only">Next month</span>
-            <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+            <ArrowRight className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
         <div className="mt-6 grid grid-cols-7 text-xs leading-6 text-gray-500">
