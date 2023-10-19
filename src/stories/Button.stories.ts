@@ -35,3 +35,12 @@ export const Danger: Story = {
     label: 'Hello world',
   },
 };
+
+export const Expand: Story = {
+  args: {
+    variant: 'primary',
+    label: 'Hello world',
+    expand: true,
+  },
+};
+
