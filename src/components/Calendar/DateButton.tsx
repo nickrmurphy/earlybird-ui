@@ -1,33 +1,51 @@
+import { HTMLProps, useReducer } from "react";
 import { classNames } from "../../utils/classNames";
+import { CalendarCorner } from "./constants";
+
+interface DateButtonProps extends Omit<HTMLProps<HTMLButtonElement>, 'onClick'> {
+    corner: CalendarCorner | undefined,
+    date: string,
+    displayDate: string,
+    isCurrentMonth: boolean,
+    isToday: boolean,
+    onClick: (isSelected: boolean, date: string) => void,
+}
+
+const cornerStyles = {
+    topLeft: 'rounded-tl-sm',
+    topRight: 'rounded-tr-sm',
+    bottomLeft: 'rounded-bl-sm',
+    bottomRight: 'rounded-br-sm',
+}
 
 export default function DateButton({
-    index,
-    totalDays,
+    corner,
     date,
     displayDate,
-    isSelected,
     isCurrentMonth,
     isToday,
     onClick,
-}) {
+}: DateButtonProps) {
+    const [isSelected, toggleIsSelected] = useReducer((state) => !state, false);
+
+    const handleClick = () => {
+        toggleIsSelected();
+        onClick(isSelected, date);
+    }
 
     return (
         <button
-            key={date}
-            onClick={() => onClick(isSelected, date)}
             type="button"
+            onClick={handleClick}
             className={classNames(
                 'py-1.5 hover:bg-gray-100 focus:z-10',
                 isCurrentMonth ? 'bg-white' : 'bg-gray-50',
+                isToday && 'font-semibold',
                 (isSelected && !isToday) && 'font-medium',
                 isSelected && 'text-white',
                 !isSelected && isCurrentMonth && !isToday && 'text-gray-900',
                 !isSelected && !isCurrentMonth && !isToday && 'text-gray-400',
-                isToday && 'font-semibold',
-                index === 0 && 'rounded-tl-sm',
-                index === 6 && 'rounded-tr-sm',
-                index === totalDays - 7 && 'rounded-bl-sm',
-                index === totalDays - 1 && 'rounded-br-sm'
+                corner && cornerStyles[corner],
             )}
         >
             <time

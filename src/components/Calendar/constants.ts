@@ -1,1 +1,6 @@
-export const daysOfWeek = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+export enum CalendarCorner {
+    TL = 'topLeft',
+    TR = 'topRight',
+    BL = 'bottomLeft',
+    BR = 'bottomRight',
+}
