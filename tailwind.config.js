@@ -2,6 +2,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  prefix: 'eb-',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",

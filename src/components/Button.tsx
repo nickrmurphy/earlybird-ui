@@ -7,13 +7,13 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const styles = {
-    base: 'rounded-full px-3 py-2 text-xs shadow-sm font-medium',
-    focus: 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600',
-    expand: 'w-full',
+    base: 'eb-rounded-sm eb-px-3 eb-py-2 eb-text-xs eb-shadow-sm eb-font-medium',
+    focus: 'focus-visible:eb-outline focus-visible:eb-outline-2 focus-visible:eb-outline-offset-2 focus-visible:eb-outline-gray-600',
+    expand: 'eb-w-full',
     variants: {
-        primary: 'bg-gray-900 text-white hover:bg-gray-700 ring-gray-700',
-        secondary: 'bg-white text-gray-900  hover:bg-gray-50 ring-gray-300 ring-1 ring-inset',
-        danger: 'bg-red-500 text-white hover:bg-red-600 ',
+        primary: 'eb-bg-gray-900 eb-text-white hover:eb-bg-gray-700 eb-ring-gray-700',
+        secondary: 'eb-bg-white eb-text-gray-900  hover:eb-bg-gray-50 eb-ring-gray-300 eb-ring-1 eb-ring-inset',
+        danger: 'eb-bg-red-500 eb-text-white hover:eb-bg-red-600 ',
     },
 }
 

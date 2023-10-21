@@ -5,16 +5,16 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>{
 }
 
 const inputStyles = {
-    base: 'block w-full pl-2 shadow-inner border-0 py-1.5 rounded-none text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6',
+    base: 'eb-block eb-w-full eb-pl-2 eb-shadow-inner eb-border-0 eb-py-1.5 eb-rounded-none eb-text-gray-900 eb-ring-1 eb-ring-inset eb-ring-gray-300 placeholder:eb-text-gray-400 sm:eb-text-sm sm:eb-leading-6',
 }
 
 export default function Input(props: InputProps) {
     return (
         <>
-            <label htmlFor={props.id} className="block text-sm font-medium leading-6 text-gray-900">
+            <label htmlFor={props.id} className="eb-block eb-text-sm eb-font-medium eb-leading-6 eb-text-gray-900">
                 {props.label}
             </label>
-            <div className="mt-2">
+            <div className="eb-mt-2">
                 <input
                     {...props}
                     className={inputStyles.base}

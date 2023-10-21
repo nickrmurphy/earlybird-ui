@@ -12,10 +12,10 @@ interface DateButtonProps extends Omit<HTMLProps<HTMLButtonElement>, 'onClick'> 
 }
 
 const cornerStyles = {
-    topLeft: 'rounded-tl-sm',
-    topRight: 'rounded-tr-sm',
-    bottomLeft: 'rounded-bl-sm',
-    bottomRight: 'rounded-br-sm',
+    topLeft: 'eb-rounded-tl-sm',
+    topRight: 'eb-rounded-tr-sm',
+    bottomLeft: 'eb-rounded-bl-sm',
+    bottomRight: 'eb-rounded-br-sm',
 }
 
 export default function DateButton({
@@ -38,22 +38,22 @@ export default function DateButton({
             type="button"
             onClick={handleClick}
             className={classNames(
-                'py-1.5 hover:bg-gray-100 focus:z-10',
-                isCurrentMonth ? 'bg-white' : 'bg-gray-50',
-                isToday && 'font-semibold',
-                (isSelected && !isToday) && 'font-medium',
-                isSelected && 'text-white',
-                !isSelected && isCurrentMonth && !isToday && 'text-gray-900',
-                !isSelected && !isCurrentMonth && !isToday && 'text-gray-400',
+                'eb-py-1.5 hover:eb-bg-gray-100 focus:eb-z-10',
+                isCurrentMonth ? 'eb-bg-white' : 'eb-bg-gray-50',
+                isToday && 'eb-font-semibold',
+                (isSelected && !isToday) && 'eb-font-medium',
+                isSelected && 'eb-text-white',
+                !isSelected && isCurrentMonth && !isToday && 'eb-text-gray-900',
+                !isSelected && !isCurrentMonth && !isToday && 'eb-text-gray-400',
                 corner && cornerStyles[corner],
             )}
         >
             <time
                 dateTime={date}
                 className={classNames(
-                    'mx-auto flex h-7 w-7 items-center justify-center rounded-lg',
-                    isSelected && isToday && 'bg-gray-50 shadow-sm text-gray-900 border-gray-900 border-2',
-                    isSelected && !isToday && 'bg-gray-900'
+                    'eb-mx-auto eb-flex eb-h-7 eb-w-7 eb-items-center eb-justify-center eb-rounded-lg',
+                    isSelected && isToday && 'eb-bg-gray-50 eb-shadow-sm eb-text-gray-900 eb-border-gray-900 eb-border-2',
+                    isSelected && !isToday && 'eb-bg-gray-900'
                 )}
             >
                 {displayDate}

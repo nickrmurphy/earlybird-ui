@@ -19,9 +19,9 @@ const ArrowButton = ({
         {...props}
         type="button"
         onClick={() => onClick(direction)}
-        className="-m-1.5 flex flex-none items-center justify-center p-1.5 text-gray-600 hover:text-gray-800"
+        className="-eb-m-1.5 eb-flex eb-flex-none eb-items-center eb-justify-center eb-p-1.5 eb-text-gray-600 hover:eb-text-gray-800"
     >
-        <span className="sr-only">{srLabel}</span>
+        <span className="eb-sr-only">{srLabel}</span>
         {children}
     </button>
 )

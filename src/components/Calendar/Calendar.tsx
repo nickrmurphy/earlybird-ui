@@ -34,13 +34,13 @@ export default function Calendar({
 
     return (
         <div>
-            <div className="mt-10 text-center lg:col-start-8 lg:col-end-13 lg:row-start-1 lg:mt-9 xl:col-start-9">
+            <div className="eb-mt-10 eb-text-center lg:eb-col-start-8 lg:eb-col-end-13 lg:eb-row-start-1 lg:eb-mt-9 xl:eb-col-start-9">
                 <Header
                     title={format(month, "MMMM")}
                     onArrowClick={changeMonth}
                 />
                 <DaysOfWeek />
-                <div className="isolate mt-2 grid grid-cols-7 gap-px rounded-sm bg-gray-200 text-sm shadow ring-1 ring-gray-200">
+                <div className="eb-isolate eb-mt-2 eb-grid eb-grid-cols-7 eb-gap-px eb-rounded-sm eb-bg-gray-200 eb-text-sm eb-shadow eb-ring-1 eb-ring-gray-200">
                     {days.map((day, i) => (
                         <DateButton
                             key={day.date}

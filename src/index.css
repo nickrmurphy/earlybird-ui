@@ -19,16 +19,14 @@
 
 @layer base {
     html {
-        @apply font-mono;
+        @apply eb-font-mono;
     }
 
     h1 {
-        @apply font-display;
+        @apply eb-font-display;
     }
 
     h2 {
-        @apply font-display;
+        @apply eb-font-display;
     }
-
-    /* ... */
 }

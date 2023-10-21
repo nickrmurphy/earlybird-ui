@@ -9,15 +9,15 @@ const Header = ({
     onArrowClick: (direction: 'next' | 'prev') => void,
 }) => {
     return (
-        <div className="flex items-center text-gray-900">
+        <div className="eb-flex eb-items-center eb-text-gray-900">
             <ArrowButton
                 srLabel="Previous month"
                 direction='prev'
                 onClick={onArrowClick}
             >
-                <LeftSmall className="h-5 w-5" aria-hidden="true" />
+                <LeftSmall className="eb-h-5 eb-w-5" aria-hidden="true" />
             </ArrowButton>
-            <div className="flex-auto text-sm font-semibold font-serif">
+            <div className="eb-flex-auto eb-text-sm eb-font-semibold eb-font-serif">
                 {title}
             </div>
             <ArrowButton
@@ -25,7 +25,7 @@ const Header = ({
                 direction='next'
                 onClick={onArrowClick}
             >
-                <RightSmall className="h-5 w-5" aria-hidden="true" />
+                <RightSmall className="eb-h-5 eb-w-5" aria-hidden="true" />
             </ArrowButton>
         </div>
     );
