@@ -1,4 +1,4 @@
-import defaultTheme from 'tailwindcss/defaultTheme'
+import preset from './lib/earlybirdpreset';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,14 +7,7 @@ export default {
     "./index.html",
     "./lib/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    fontFamily: {
-      serif: ['Noto Serif',  ...defaultTheme.fontFamily.serif],
-      mono: ['Noto Mono',  ...defaultTheme.fontFamily.mono],
-      display: ['Noto Serif Display',  ...defaultTheme.fontFamily.sans],
-    },
-    extend: {},
-  },
   plugins: [],
+  presets: [preset]
 }
 

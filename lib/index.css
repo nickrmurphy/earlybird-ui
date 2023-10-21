@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        @apply eb-font-mono;
+    }
+
+    h1 {
+        @apply eb-font-display;
+    }
+
+    h2 {
+        @apply eb-font-display;
+    }
+}
+
 @font-face {
     font-family: 'Noto Serif';
     src: url('./assets/NotoSerif.ttf'), url('./assets/NotoSerif-Italic.ttf');
@@ -15,18 +29,4 @@
 @font-face {
     font-family: 'Noto Serif Display';
     src: url('./assets/NotoSerifDisplay.ttf'), url('./assets/NotoSerifDisplay-Italic.ttf');
-}
-
-@layer base {
-    html {
-        @apply eb-font-mono;
-    }
-
-    h1 {
-        @apply eb-font-display;
-    }
-
-    h2 {
-        @apply eb-font-display;
-    }
 }
