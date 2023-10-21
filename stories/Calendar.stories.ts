@@ -1,26 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import Input from '../components/Input';
+import Calendar from '../lib/components/Calendar';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'Input',
-  component: Input,
+  title: 'Calendar',
+  component: Calendar,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
   args: {
-    id: 'sb-input',
-    label: 'Hello label',
+    onDatesChange: (dates: string[]) => console.log(dates),
   },
-} satisfies Meta<typeof Input>;
+} satisfies Meta<typeof Calendar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Main: Story = {
-  args: {
-    id: 'sb-input',
-    label: 'Hello label',
-  },
-};
+export const Main: Story = { };
