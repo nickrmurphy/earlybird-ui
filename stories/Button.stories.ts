@@ -43,4 +43,3 @@ export const Expand: Story = {
     expand: true,
   },
 };
-

@@ -16,6 +16,7 @@ export default function Input({
     inputClassName = '',
     ...props
 }: InputProps) {
+    console.log('yo')
     return (
         <>
             <div className={props.className}>

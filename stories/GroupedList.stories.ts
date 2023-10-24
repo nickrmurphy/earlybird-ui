@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import GroupedList from '../lib/components/GroupedList';
-import { ListGroupItemProps } from '../lib/components/GroupedList';
+import { ListGroupItemProps } from '../lib/components/GroupedList/ListGroupItem';
 
 const getContacts = (names: string[]) => {
     const actionableContacts: { [key: string]: ListGroupItemProps[] } = {};
