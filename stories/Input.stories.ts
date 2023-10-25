@@ -22,5 +22,6 @@ export const Main: Story = {
   args: {
     id: 'sb-input',
     label: 'Hello label',
+    required: true,
   },
 };
