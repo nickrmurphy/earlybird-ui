@@ -11,14 +11,19 @@ const styles = {
     focus: 'focus-visible:eb-outline focus-visible:eb-outline-2 focus-visible:eb-outline-offset-2 focus-visible:eb-outline-gray-600',
     expand: 'eb-w-full',
     variants: {
-        primary: 'eb-bg-gray-900 eb-text-white hover:eb-bg-gray-700 eb-ring-gray-700',
-        secondary: 'eb-bg-white eb-text-gray-900  hover:eb-bg-gray-50 eb-ring-gray-300 eb-ring-1 eb-ring-inset',
-        danger: 'eb-bg-red-500 eb-text-white hover:eb-bg-red-600 ',
+        primary: 'eb-bg-gray-900 eb-text-white hover:eb-bg-gray-700 eb-ring-gray-700 disabled:eb-bg-gray-500',
+        secondary: 'eb-bg-white eb-text-gray-900  hover:eb-bg-gray-50 eb-ring-gray-300 eb-ring-1 eb-ring-inset disabled:eb-text-gray-500 disabled:eb-bg-gray-100',
+        danger: 'eb-bg-red-500 eb-text-white hover:eb-bg-red-600 disabled:eb-bg-red-400',
     },
 }
 
-export default function Button(props: ButtonProps) {
-    const { variant = 'primary', className, label, expand = false } = props;
+export default function Button({
+    variant = 'primary',
+    className,
+    label,
+    expand = false,
+    ...props
+}: ButtonProps) {
     return (
         <button
             {...props}
