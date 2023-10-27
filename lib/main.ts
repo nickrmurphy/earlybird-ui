@@ -9,5 +9,6 @@ export { default as GroupedList } from './components/GroupedList';
 export { default as InfoList } from './components/InfoList';
 export { default as InfoListForm } from './components/InfoList/InfoListForm';
 export { default as InfoListItem } from './components/InfoList/InfoListItem';
+export { default as Drawer } from './components/Drawer';
 
 export { default } from './earlybirdpreset';
