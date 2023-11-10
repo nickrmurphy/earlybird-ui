@@ -1,13 +1,13 @@
 export type ButtonVariant = 'primary' | 'secondary' | 'danger';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    label: string,
+    label?: string,
     variant?: ButtonVariant,
     expand?: boolean,
 }
 
 const styles = {
-    base: 'eb-rounded-sm eb-px-3 eb-py-2 eb-text-xs eb-shadow-sm eb-font-medium',
+    base: 'eb-rounded-sm eb-px-3 eb-py-2 eb-text-xs eb-shadow-sm eb-font-medium eb-inline-flex eb-items-center',
     focus: 'focus-visible:eb-outline focus-visible:eb-outline-2 focus-visible:eb-outline-offset-2 focus-visible:eb-outline-gray-600',
     expand: 'eb-w-full',
     variants: {
@@ -22,8 +22,10 @@ export default function Button({
     className,
     label,
     expand = false,
+    children,
     ...props
 }: ButtonProps) {
+    console.log('latest')
     return (
         <button
             {...props}
@@ -35,7 +37,12 @@ export default function Button({
                 ${className}
             `}
         >
-            {label}
+            {
+                children ? <span className="eb-sr-only">{label}</span> : label
+            }
+            {
+                children
+            }
         </button>
     )
 }

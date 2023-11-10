@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Button from '../lib/components/Button';
+import { AddOne } from '@icon-park/react';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -48,3 +49,11 @@ export const Expand: Story = {
     expand: true,
   },
 };
+
+export const WithChildren: Story = {
+  render: () => (
+    <Button label='Add thing'>
+      Add another thing<AddOne className='eb-ps-1' />
+    </Button>
+  )
+}
